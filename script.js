@@ -1,6 +1,14 @@
-
+function test(){
+    retour()
+}
 
 window.onload = () => {
+
+    var a = 'hello'
+    function retour(){
+       console.log(a) 
+    }
+    
     
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -51,44 +59,41 @@ window.onload = () => {
         ctx.stroke();
         ctx.closePath();
     }
-    
-    draw('2x');
 
+    //draw("2*x+3")
 
-    
     
     function draw(formula){
-        for (let i = 399; i < width; i--) {
+        for (let i = 0; i <= width; i++) {
             var obj = new Formula(formula);
-            var result = obj.evaluate({x: i});
-            ctx.beginPath()
+            var result = obj.evaluate({x: (i - (width/2))});
             ctx.fillStyle = 'red';
             ctx.fillRect(i,result,2,2);
-            ctx.closePath()
             console.log(i)
         }
     }
+    
 
-
+    var btn = document.getElementById("dessiner");
+    btn.onclick = () => {
+        var text = document.general.formula.value;
+        draw(text);
+    }
 
     
 
-
+    
     
 
     
-
-
-
+    
+    
+    
     
 
-
-
-
-
-
-
     
-
+    
+    
 
 }
+

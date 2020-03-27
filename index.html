@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <script src="fparser.js"></script>
-    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-Curve</title>
 </head>
 <body>
 
-    <canvas id="canvas" height="400" width="400"></canvas>
+    <h1>Bienvenue sur MathCurve</h1>
+
+    <canvas id="canvas" height="400" width="400">
+        <p>Navré... Mais votre navigateur ne semble pas à jour pour utiliser ce site...</p>
+    </canvas>
     <br>
     <form name="general">
-        <!--
+        
         <p>
             Tapez une fonction sous la forme F(x) = a * x + b
             <br>
-            F(x) = <input name="formula" type="text"><Button id="btn">Dessiner</Button>
-        </p>-->
+            F(x) = <input name="formula" type="text"><input type="button" id="dessiner" value="Dessiner"></i>
+        </p>
     </form>
+    
     
 </body>
 </html>
