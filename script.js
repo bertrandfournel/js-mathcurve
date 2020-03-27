@@ -1,23 +1,11 @@
 window.onload = () => {
-
-    var a = 'hello'
-    function retour(){
-       console.log(a) 
-    }
-    
     
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var height = canvas.getAttribute("height");
     var width = canvas.getAttribute("width");
     var steps = 20;
-    
-    
-    var btn = document.getElementById("btn");
-    
-
-    
-    
+   
 
     // Création des axes X et Y
     // Axe X
@@ -59,6 +47,7 @@ window.onload = () => {
     
 
     // Ceci est la fonction qui dessine la courbe, elle n'est pas terminée
+    // Il est nécessaire de prendre en compte la variable steps et de faire des réajustements
     function draw(formula){
         for (let i = 0; i <= width; i++) {
             var obj = new Formula(formula);
@@ -75,21 +64,7 @@ window.onload = () => {
         var text = document.general.formula.value;
         draw(text);
     }
-
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-
-    
-    
-    
+  
 
 }
 
