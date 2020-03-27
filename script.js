@@ -1,7 +1,3 @@
-function test(){
-    retour()
-}
-
 window.onload = () => {
 
     var a = 'hello'
@@ -60,9 +56,9 @@ window.onload = () => {
         ctx.closePath();
     }
 
-    //draw("2*x+3")
-
     
+
+    // Ceci est la fonction qui dessine la courbe, elle n'est pas terminée
     function draw(formula){
         for (let i = 0; i <= width; i++) {
             var obj = new Formula(formula);
@@ -73,7 +69,7 @@ window.onload = () => {
         }
     }
     
-
+    // Ici l'écouteur d'évènement du bouton "Dessiner"
     var btn = document.getElementById("dessiner");
     btn.onclick = () => {
         var text = document.general.formula.value;
