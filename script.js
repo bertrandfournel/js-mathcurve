@@ -5,6 +5,8 @@ window.onload = () => {
     var height = canvas.getAttribute("height");
     var width = canvas.getAttribute("width");
     var steps = 20;
+    var unitBySteps = width / steps;
+    
    
 
     // Création des axes X et Y
@@ -49,11 +51,11 @@ window.onload = () => {
     // Ceci est la fonction qui dessine la courbe, elle n'est pas terminée
     // Il est nécessaire de prendre en compte la variable steps et de faire des réajustements
     function draw(formula){
-        for (let i = 0; i <= width; i++) {
+        for (let i = width/2; i <= width; i++) {
             var obj = new Formula(formula);
-            var result = obj.evaluate({x: (i - (width/2))});
+            var result = obj.evaluate({x: i});
             ctx.fillStyle = 'red';
-            ctx.fillRect(i,result,2,2);
+            ctx.fillRect(i,result,1,1);
             console.log(i)
         }
     }
